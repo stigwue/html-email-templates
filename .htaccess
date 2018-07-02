@@ -1,0 +1,23 @@
+# -FrontPage-
+
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+
+Options -MultiViews -Indexes
+
+RewriteEngine on
+
+RewriteRule ^template/([^/.]+)/?$ index.php?template=$1 [L]
+RewriteRule ^template index.php?template=welcome [L]
+
+#url not found
+#ErrorDocument 404 index.php?template=welcome
