@@ -20,7 +20,7 @@
                                             <table class="table table-bordered" width="100%">
                                                 <thead>
                                                     <tr style="text-align: center;">
-                                                        <th colspan="2">Printon Receipt <?= isset($_POST['order']) ? 'for ' . $_POST['order'] : '' ?></th>
+                                                        <th colspan="2">Receipt <?= isset($_POST['order']) ? 'for ' . $_POST['order'] : '' ?></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
